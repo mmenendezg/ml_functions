@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 
-def get_logdir(date_type="date", path_folder=None):
+def get_logdir(date_type: str = "date", path_folder: str = None):
     """This function creates the name of a folder for Tensorboard
     logs using the current date or datetime
 

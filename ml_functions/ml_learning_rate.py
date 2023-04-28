@@ -1,4 +1,4 @@
-def exponential_decay(lr=1e-4, s=5):
+def exponential_decay(lr: float = 1e-4, s: int = 5):
     """Implements exponential decay of learning rate
 
     n(t) = lr * 0.1 ** (epoch / s)
@@ -22,12 +22,12 @@ def exponential_decay(lr=1e-4, s=5):
 
 
 def exponential_decay_with_warmup(
-    lr_start=1e-4,
-    lr_max=1e-3,
-    lr_min=1e-5,
-    lr_rampup_epochs=4,
-    lr_sustain_epochs=1,
-    lr_exp_decay=0.8,
+    lr_start: float = 1e-4,
+    lr_max: float = 1e-3,
+    lr_min: float = 1e-5,
+    lr_rampup_epochs: int = 4,
+    lr_sustain_epochs: int = 1,
+    lr_exp_decay: float = 0.8,
 ):
     """Implements exponential decay learning rate with warm up.
     
@@ -59,7 +59,7 @@ def exponential_decay_with_warmup(
     return exponential_decay_fn
 
 
-def piecewise_constant_fn(epoch):
+def piecewise_constant_fn(epoch: int):
     """Implements piecewise constant decay of learning rate.
 
     Args:
